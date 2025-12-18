@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ironmace — Game Security & Anti‑Cheat Notes</title>
+  <meta name="description" content="A compact portfolio-style site introducing Ironmace and practical anti-cheat/security concepts, with small interactive demos." />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="grid header-grid">
+      <div>
+        <p class="eyebrow">Anti‑cheat</p>
+        <h1 class="site-title">Ironmace: Small Studio, Serious Security</h1>
+        <p id="dayMessage" class="sub"></p>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="examples.html">Examples</a>
+        <a class="nav-link" href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="grid content">
+    <section class="page-hero" aria-labelledby="heroTitle">
+      <div class="hero-text">
+        <h2 class="hero-title" id="heroTitle">What this site covers</h2>
+        <p class="hero-lead" id="readingTarget">
+          This website introduces the indie game company <strong>Ironmace</strong> and explains, at a high level,
+          how anti‑cheat teams reason about adversarial players. I previously coordinated with an anti‑cheat group to
+          help fix exploit‑adjacent defects and reduce abuse. The goal here is educational: understand trust boundaries,
+          threat modeling, and practical mitigations—without sharing cheat-building instructions.
+        </p>
+
+        <div class="controls" aria-label="Reading controls">
+          <button id="focusBtn" class="btn" type="button" aria-pressed="false">Toggle Focus Mode</button>
+
+          <div class="control">
+            <label for="lineHeightSlider">Line height</label>
+            <input id="lineHeightSlider" type="range" min="1.2" max="2.2" step="0.1" value="1.6" />
+            <span class="hint">Current: <strong id="lineHeightValue">1.6</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <figure class="hero-figure">
+        <img
+          id="boundaryImg"
+          src="images/game-home.webp"
+          srcset="images/game-home.webp 1x, images/game-home@2x.webp 2x"
+          sizes="(max-width: 900px) 92vw, 520px"
+          width="1100"
+          height="650"
+          alt="Gameplay screenshot illustrating Ironmace’s dark fantasy dungeon environment"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption id="boundaryCaption">A first look at the dungeon atmosphere and the game’s visual language.</figcaption>
+      </figure>
+    </section>
+
+    <section class="block" aria-labelledby="explorerTitle">
+      <h3 id="explorerTitle">Gameplay Showcase</h3>
+      <p class="sub">Choose a scene to learn what it communicates about Ironmace’s game design.</p>
+
+      <div class="explorer">
+        <div class="control">
+          <label for="boundarySelect">Choose a gameplay scene</label>
+          <select id="boundarySelect">
+            <option value="dungeon">Dungeon exploration</option>
+            <option value="combat">PvP combat encounter</option>
+            <option value="loot">Loot, inventory & extraction</option>
+          </select>
+        </div>
+
+        <div class="explainer" aria-live="polite">
+          <h4 id="boundaryTitle"></h4>
+          <p id="boundaryText"></p>
+          <ul class="bullets" id="boundaryBullets"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="multi-col" aria-label="Core concepts">
+      <article class="card">
+        <h3>Attack surface</h3>
+        <p class="sub">
+          Where inputs enter your system: API calls, packet handlers, matchmaking, and even UI flows. Reduce exposed
+          endpoints and validate everything.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Threat model</h3>
+        <p class="sub">
+          Who attacks, why, and with what capabilities? A realistic model assumes reverse engineering and packet manipulation.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Mitigations</h3>
+        <p class="sub">
+          Defense in depth: server authority, rate limiting, integrity checks, and detection/response pipelines.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="grid footer-grid">
+      <p class="sub">
+      </p>
+      <p class="sub">
+
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

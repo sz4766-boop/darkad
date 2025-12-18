@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ironmace — About</title>
+  <meta name="description" content="About the project, the scope, credits, and a short embedded media clip for the assignment requirement." />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="grid header-grid">
+      <div>
+        <p class="eyebrow">Professional Web • Security Communication</p>
+        <h1 class="site-title">About this project</h1>
+        <p id="dayMessage" class="sub"></p>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="examples.html">Examples</a>
+        <a class="nav-link active" href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="grid content">
+    <section class="page-hero" aria-labelledby="scopeTitle">
+      <div class="hero-text">
+        <h2 class="hero-title" id="scopeTitle">Purpose & scope</h2>
+        <p class="hero-lead" id="readingTarget">
+          This is a small, professionally oriented website that presents Ironmace as a case study for how a small game
+          studio can benefit from clear security communication. I describe common anti‑cheat concepts and high‑level
+          mitigation patterns, informed by previous collaboration with an anti‑cheat group on reducing abuse vectors.
+        </p>
+
+        <div class="controls">
+          <button id="focusBtn" class="btn" type="button" aria-pressed="false">Toggle Focus Mode</button>
+
+          <div class="control">
+            <label for="lineHeightSlider">Line height</label>
+            <input id="lineHeightSlider" type="range" min="1.2" max="2.2" step="0.1" value="1.6" />
+            <span class="hint">Current: <strong id="lineHeightValue">1.6</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <figure class="hero-figure">
+        <img
+          src="images/anti.png"
+          srcset="images/anti.png 1x, images/anti@2x.png 2x"
+          sizes="(max-width: 900px) 92vw, 520px"
+          width="1100"
+          height="650"
+          alt="Illustration of layered defenses in a game security pipeline"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Layered defenses combine prevention, detection, and response.</figcaption>
+      </figure>
+    </section>
+
+    <section class="block" aria-labelledby="discordTitle">
+      <h3 id="discordTitle">Discord collaboration (evidence)</h3>
+      <p class="sub">
+        Part of my experience came from communicating with Ironmace’s anti‑cheat administrators in a Discord server.
+        The goal of these conversations was not to discuss exploit development, but to coordinate on <strong>responsible
+        reporting</strong> and <strong>practical mitigation</strong>. Typical work included: clarifying reproduction steps,
+        identifying which trust boundary was failing (client/network/server), and confirming that a patch actually reduced abuse.
+      </p>
+      <p class="sub">
+        Below are example screenshots of the conversation (with sensitive details redacted where appropriate). They are included
+        as documentation of collaboration and professional communication.
+      </p>
+
+      <div class="gallery" aria-label="Discord chat screenshots">
+        <figure>
+          <img
+            src="images/discord-chat-1.png"
+            srcset="images/discord-chat-1.png 1x, images/discord-chat-1@2x.png 2x"
+            sizes="(max-width: 900px) 92vw, 520px"
+            width="1200"
+            height="800"
+            alt="Screenshot of a Discord conversation with anti-cheat administrators (redacted)"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>Example: reporting a symptom and agreeing on a safe reproduction outline.</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="images/discord-chat-2.png"
+            srcset="images/discord-chat-2.png 1x, images/discord-chat-2@2x.png 2x"
+            sizes="(max-width: 900px) 92vw, 520px"
+            width="1200"
+            height="800"
+            alt="Screenshot of a Discord conversation confirming a mitigation direction (redacted)"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>Example: identifying the trust boundary and proposing mitigation patterns.</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="images/discord-chat-3.png"
+            srcset="images/discord-chat-3.png 1x, images/discord-chat-3@2x.png 2x"
+            sizes="(max-width: 900px) 92vw, 520px"
+            width="1200"
+            height="800"
+            alt="Screenshot of a Discord conversation verifying a patch reduced abuse (redacted)"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>Example: post‑patch verification and follow‑up items.</figcaption>
+        </figure>
+      </div>
+
+      <ul class="bullets">
+        <li>Tip: If screenshots include usernames, IDs, or private links, blur or crop them before publishing.</li>
+        <li>Tip: Keep captions factual (what the screenshot demonstrates) rather than revealing sensitive details.</li>
+      </ul>
+    </section>
+
+        <section class="block" aria-labelledby="mediaTitle">
+      <h3 id="mediaTitle">Cheater Video</h3>
+      <p class="sub">
+
+      </p>
+
+      <div class="media-center">
+        <video class="media" controls preload="metadata" poster="images/video-poster.jpg">
+          <source src="images/1.mp4" type="video/mp4" />
+          <source src="images/1.mp4" type="video/mp4" />
+          Your browser does not support the video element.
+        </video>
+      </div>
+
+
+    </section>
+
+    <section class="block">
+      <h3>Contact</h3>
+      <p class="sub">Demo form with a live character counter.</p>
+
+      <form class="form" id="contactForm" action="https://formspree.io/f/xdkqjonr" method="POST">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="name@nyu.edu" required />
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write a short note..." required></textarea>
+          <div class="hint">Characters: <strong id="charCount">0</strong></div>
+        </div>
+
+        <button class="btn" type="submit">Send</button>
+        <p class="sub" id="formStatus" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="block">
+      <h3>Credits</h3>
+      <ul class="bullets">
+        <li>Shengbo Zhang</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+
+  </footer>
+</body>
+</html>
